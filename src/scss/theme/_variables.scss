@@ -1,0 +1,82 @@
+//---------------------------------------------
+//
+//  Variables
+//
+//    1. Bootstrap Fonts
+//    2. Bootstrap Globals
+//    3. Bootstrap Colors
+//    4. Bootstrap Container Width
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Bootstrap Fonts
+//---------------------------------------------
+
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+//---------------------------------------------
+// 2. Bootstrap Globals
+//---------------------------------------------
+
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+
+//---------------------------------------------
+// 3. Bootstrap Colors
+//---------------------------------------------
+
+$body-color: #000000; // The default text color
+
+$primary:    #4bb24f;
+$secondary:  #1B98F3;
+$success:    #198754;
+$info:       #0dcaf0;
+$warning:    #ffc107;
+$danger:     #dc3545;
+$light:      #F1F6FF;
+$dark:       #14213D;
+$border-color: #DBE1EF;
+
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+//---------------------------------------------
+// 4. Bootstrap Container Width
+//---------------------------------------------
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// My Custom Variables
+$para-color: #5E6E8F;
+$base-font: 'Source Sans Pro', sans-serif;
+
+// Bootstrap Components Overriding
+// buttons
+$btn-padding-y: 14px;
+$btn-padding-x: 30px;
+$btn-font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+$btn-font-size: 16px;
+$btn-white-space: nowrap;
+$btn-link-color: #fff;
+$btn-link-hover-color: #fff;
+$btn-border-width: 2px;
+$btn-line-height: 1;
+$btn-border-radius: 2px;
+$btn-font-weight: 600;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;

@@ -1,0 +1,26 @@
+.swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $primary;
+    border: 0;
+    outline: 0;
+
+    &:focus {
+        border: 0;
+        outline: 0;  
+    }
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+        width: 60px;
+        border-radius: 2px;
+        height: 4px;
+
+        &:focus {
+            border: 0;
+            outline: 0;
+        }
+    }
+  }
+}

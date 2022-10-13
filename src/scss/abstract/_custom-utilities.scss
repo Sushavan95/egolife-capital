@@ -1,0 +1,66 @@
+.text-muted {
+  color: rgba(255,255,255,0.75)!important;
+}
+.text-sm {
+  font-size: 0.9375rem;
+}
+.text-para {
+  color: $para-color;
+}
+.text-xs {
+  font-size: 0.875rem;
+}
+.text-xxs {
+  font-size: 0.75rem;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.dark-link {
+  color: $dark;
+
+  &:hover {
+    color: $primary;
+  }
+}
+.primary-link {
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+.secondary-link {
+  color: $yellow;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.border-radius {
+  border-radius: 6px !important;
+}
+.border-radius-sm {
+  border-radius: 8px !important;
+}
+.border-radius-lg {
+  border-radius: 15px !important;
+}
+.border-radius-circle {
+  border-radius: 50% !important;
+}
+
+.fit-cover {
+  object-fit: cover;
+}
+.fit-contain {
+  object-fit: contain;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}

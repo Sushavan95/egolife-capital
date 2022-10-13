@@ -1,0 +1,330 @@
+.site-footer {
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+  .site-footer__top {
+    padding: 4rem 0;
+
+    .menus-wrapper {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 1.5rem 1.5rem;
+
+      .menu-block {
+        .menu {
+          li {
+            margin: 0 0 1rem 0;
+
+            a {
+              font-size: 0.9375rem;
+              color: rgba(255,255,255,0.75);
+
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        &.menu-block--about {
+          grid-column: 1/13;
+
+          p {
+            font-size: 0.9375rem;
+            color: rgba(255,255,255,0.75);
+          }
+        }
+        &.menu-block--services {
+          grid-column: 1/7;
+        }
+        &.menu-block--quick-links {
+          grid-column: 7/13;
+        }
+        &.menu-block--need-help {
+          grid-column: 1/7;
+        }
+        &.menu-block--contact {
+          grid-column: 1/13;
+        }
+      }
+    }
+
+    .contact-block {
+      .contact-block__icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 1.25rem;
+          color: #fff;
+        }
+      }
+      
+      .contact-block__text {
+        width: calc(100% - 48px);
+        a {
+          color: rgba(255,255,255,0.75);
+
+          &:hover {
+            color: $primary;
+          }
+        }
+        p {
+          color: rgba(255,255,255,0.65);
+        }
+      }
+    }
+
+    .social-icons {
+      li {
+        a {
+          color: $primary;
+          border: 1px solid $primary;
+          width: 36px;
+          height: 36px;
+          font-size: 1.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-left: 0.5rem;
+          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $primary;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .site-footer__bottom {
+    .container {
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .copyright-text {
+      font-size: 0.875rem;
+    }
+    .bottom-menu {
+      li {
+        a {
+          font-size: 0.875rem;
+          color: $light;
+          margin: 0 0.25rem;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .scroll-to-top-button {
+    height: 48px;
+    width: 48px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  .newsletter-form {
+    .form__field {
+      border-radius: 2px;
+      .form__input {
+        padding: 0.75rem 1rem;
+      }
+      button[type="submit"] {
+        padding: 0.625rem 1.35rem;
+        font-size: 1.25rem;
+      }
+    } 
+  }
+}
+@include media-breakpoint-up(sm) {
+  .site-footer {
+    .site-footer__top {
+      .menus-wrapper {
+        .menu-block {
+          &.menu-block--contact {
+            grid-column: 7/13;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .site-footer {
+    .site-footer__top {
+      padding: 4.5rem 0;
+      .menus-wrapper {
+        .menu-block {
+          &.menu-block--about {
+            grid-column: 1/5;
+          }
+          &.menu-block--services {
+            grid-column: 5/9;
+          }
+          &.menu-block--quick-links {
+            grid-column: 9/13;
+          }
+          &.menu-block--need-help {
+            grid-column: 1/5;
+          }
+          &.menu-block--contact {
+            grid-column: 5/9;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .site-footer {
+    .site-footer__top {
+      padding: 4rem 0;
+
+      .newsletter-form {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+    .site-footer__bottom {
+      .bottom-menu {
+        li {
+          a {
+            margin: 0 0.75rem;
+          }
+        }
+      }
+    }
+    .scroll-to-top-button {
+      &.scroll-to-top-button--show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .site-footer {
+    .site-footer__top {
+      padding: 4.5rem 0;
+
+      .menus-wrapper {
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 0 1.5rem;
+
+        .menu-block {
+          &.menu-block--about {
+            grid-column: 1/4;
+          }
+          &.menu-block--services {
+            grid-column: 4/6;
+          }
+          &.menu-block--quick-links {
+            grid-column: 6/8;
+          }
+          &.menu-block--need-help {
+            grid-column: 8/10;
+          }
+          &.menu-block--contact {
+            grid-column: 10/13;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+.site-footer {
+  .site-footer__top {
+    padding: 5.625rem 0;
+
+    .menus-wrapper {
+      .menu-block {
+        .menu {
+          li {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+        
+        &.menu-block--about {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .site-footer__bottom {
+    .bottom-menu {
+      li {
+        a {
+          font-size: 0.9375rem;
+        }
+      }
+    }
+  }
+}
+}
+@media (min-width: 1700px) {
+  .site-footer {
+    .site-footer__top {
+      .menus-wrapper {
+        .menu-block {
+          .menu {
+            li {
+              a {
+                font-size: 1.0625rem;
+              }
+            }
+          }
+          
+          &.menu-block--about {
+            p {
+              font-size: 1.0625rem;
+            }
+          }
+        }
+      }
+    }
+    .site-footer__bottom {
+      .bottom-menu {
+        li {
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

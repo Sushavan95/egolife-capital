@@ -1,0 +1,30 @@
+.service-card {
+    padding: 1.875rem;
+    border-radius: 2px;
+    transition: box-shadow 0.3s ease-in-out;
+    border: 1px solid $border-color;
+
+    .service-card__header {
+        margin-bottom: 1rem;
+        img {
+            width: 64px;
+        }
+    }
+    .service-card__body {
+        .service-card__title {
+            a {
+                font-size: 1.5rem;
+            }
+        }
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    }
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+}

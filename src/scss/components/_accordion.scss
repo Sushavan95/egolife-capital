@@ -1,0 +1,47 @@
+.accordion-container {
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    margin: 10px auto;
+  }
+  .set {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: light;
+    > a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: $dark;
+      font-weight: 600;
+      border-bottom: 1px solid $border-color;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      i {
+        float: right;
+        margin-top: 2px;
+      }
+    }
+    > a.active {
+      background-color: $primary;
+      color: #fff;
+    }
+    .content {
+        background-color: #fff;
+        border-bottom: 1px solid $border-color;
+        display: none;
+        p {
+          padding: 0.75rem;
+          margin: 0;
+          color: $para-color;
+        }
+    }
+
+    &:nth-child(1) {
+        .content {
+            display: block;
+        }
+    }
+  }

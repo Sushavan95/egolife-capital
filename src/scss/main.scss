@@ -1,0 +1,55 @@
+//---------------------------------------------
+//
+//  Table of Contents
+//
+//    1. Basics
+//    2. Page Layout
+//    3. Components
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Basics
+//---------------------------------------------
+
+@import "./theme/variables";
+@import "./theme/bootstrap";
+@import "./base/fonts";
+
+// If you do not want to load the customized bootstrap version, just use the following line.
+// @import "~bootstrap/scss/bootstrap";
+
+// @import 'node_modules/bootstrap-icons/font/bootstrap-icons';
+
+// Abstract
+@import "./abstract/custom-utilities";
+@import "./abstract/mixins";
+
+// Base
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/fonts";
+
+
+//---------------------------------------------
+// 3.Components
+//---------------------------------------------
+
+@import "components/blog-item";
+@import "components/btn";
+@import "components/service-card";
+@import "components/accordion";
+@import "components/form";
+@import "components/swiper";
+
+
+// Layout
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/services-grid";
+
+
+// Pages
+@import "./pages/home";
+
+// @import "~nice-select2/src/scss/nice-select2.scss";

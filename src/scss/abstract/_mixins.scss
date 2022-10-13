@@ -1,0 +1,8 @@
+// Mixin for background image setting
+@mixin backgroundImageSetting($position, $size, $repeat) {
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
+
+
