@@ -260,6 +260,11 @@
         }
       }
     }
+    .site-footer__bottom {
+      .copyright-text {
+        font-size: 0.9375rem;
+      }
+    }
   }
 }
 @include media-breakpoint-up(xxl) {
@@ -324,6 +329,9 @@
             font-size: 1rem;
           }
         }
+      }
+      .copyright-text {
+        font-size: 1rem;
       }
     }
   }
