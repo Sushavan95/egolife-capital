@@ -6,7 +6,21 @@
 
     .service-card-container {
         margin: 0 0 1.5rem;
-        flex: 0 0 33.3%;
+        flex: 0 0 100%;
         padding: 0 0.75rem;
+    }
+}
+@include media-breakpoint-up(sm) {
+    .services-cards-grid {
+        .service-card-container {
+            flex: 0 0 50%;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .services-cards-grid {
+        .service-card-container {
+            flex: 0 0 33.3%;
+        }
     }
 }

@@ -106,8 +106,12 @@ $(document).ready(function() {
         },
         1200: {
           slidesPerView: 2,
-          spaceBetween: 50,
+          spaceBetween: 48,
         },
+        1700: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        }
       },
       // If we need pagination
       pagination: {

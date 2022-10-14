@@ -340,15 +340,15 @@ label.error {
 
 /* Section Padding */
 .section--py {
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 .section--pb {
   padding-top: 0;
-  padding-bottom: 3.125rem;
+  padding-bottom: 3.5rem;
 }
 .section--pt {
-  padding-top: 3.125rem;
+  padding-top: 3.5rem;
   padding-bottom: 0;
 }
 @include media-breakpoint-up(md) {
@@ -411,7 +411,25 @@ label.error {
 // Section Title and Section Header
 .section__title,
 .section__header {
+  margin-bottom: 2rem;
+}
+@include media-breakpoint-up(lg) {
+  .section__title,
+.section__header {
+  margin-bottom: 2.25rem;
+}
+}
+@include media-breakpoint-up(xxl) {
+  .section__title,
+.section__header {
+  margin-bottom: 2.5rem;
+}
+}
+@media (min-width: 1700px) {
+  .section__title,
+.section__header {
   margin-bottom: 3rem;
+}
 }
 
 .swiper-pagination-bullet {

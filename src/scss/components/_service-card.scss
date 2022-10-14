@@ -3,11 +3,13 @@
     border-radius: 2px;
     transition: box-shadow 0.3s ease-in-out;
     border: 1px solid $border-color;
+    text-align: center;
 
     .service-card__header {
         margin-bottom: 1rem;
         img {
             width: 64px;
+            margin: 0 auto;
         }
     }
     .service-card__body {
@@ -27,4 +29,43 @@
     &:hover {
         box-shadow: $box-shadow;
     }
+}
+@include media-breakpoint-up(sm) {
+    .service-card {
+        text-align: left;
+        .service-card__header {
+            img {
+                margin: 0 auto 0 0;
+            }
+        }
+        .service-card__body {
+            .service-card__title {
+                a {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .service-card {
+        .service-card__body {
+            .service-card__title {
+                a {
+                    font-size: 1.375rem;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .service-card {
+        .service-card__body {
+            .service-card__title {
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    } 
 }

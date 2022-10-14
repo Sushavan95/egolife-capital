@@ -29,7 +29,7 @@
       ul {
         li {
           position: relative;
-          margin: 0 1.25rem 0 0;
+          margin: 0 1rem 0 0;
           a {
             color: $dark;
             padding: 0.875rem 0.75rem;
@@ -83,6 +83,7 @@
                 opacity: 1;
               }
               .dropdown-icon {
+                margin-left: 0.25rem;
                 i {
                   -webkit-transform: rotate(180deg);
                   -ms-transform: rotate(180deg);
@@ -116,8 +117,8 @@
             left: 0;
             min-width: 200px;
             background: #fff;
-            -webkit-box-shadow: 0px 1px 3px 0px rgb(0, 0, 0, 0.2), 0px 1px 1px 0px rgb(0, 0, 0, 0.14), 0px 2px 1px -1px rgb(0, 0, 0, 0.12);
-            box-shadow: 0px 1px 3px 0px rgb(0, 0, 0, 0.2), 0px 1px 1px 0px rgb(0, 0, 0, 0.14), 0px 2px 1px -1px rgb(0, 0, 0, 0.12);
+            box-shadow: $box-shadow;
+            border-radius: 2px;
             opacity: 0;
             -webkit-transform: translateY(16px);
             -ms-transform: translateY(16px);
@@ -126,28 +127,46 @@
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-            a {
-              font-size: 0.8rem;
-              color: $dark;
-              padding: 0.75rem 1rem;
-              display: block;
-              margin: 0;
-              &::before {
-                display: none;
+            overflow: hidden;
+
+            li {
+              margin-right: 0;
+
+              a {
+                font-size: 0.9375rem;
+                color: $dark;
+                padding: 1rem 1.15rem;
+                display: block;
+                margin: 0;
+                
+                &::before {
+                  display: none;
+                }
               }
+              
               &:hover {
-                background: $light;
-                color: $primary;
+                a {
+                  background: $primary;
+                  color: #fff;
+                }
+                
               }
             }
           }
         }
       }
     }
-    .site-header__btn--nav-toggler {
-      font-size: 1.875rem;
-      color: $dark;
+    .site-header__cta-wrapper {
+      .btn {
+        padding: 0.675rem 1.35rem;
+        font-size: 0.875rem;
+      }
+      .site-header__btn--nav-toggler {
+        font-size: 1.875rem;
+        color: $dark;
+      }
     }
+    
   }
   .offcanvas {
     .btn-close {
@@ -161,7 +180,7 @@
         li {
           a {
             color: $dark;
-            font-weight: 500;
+            font-weight: 600;
             padding: 0.5rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -187,9 +206,11 @@
             li {
               a {
                 font-size: 0.9rem;
-                color: rgba(255, 255, 255, 0.75);
-                &:hover {
-                  color: #fff;
+                color: $dark;
+              }
+              &:hover {
+                a {
+                  color: $primary;
                 }
               }
             }
@@ -257,6 +278,7 @@
       .site-header__nav {
         ul {
           li {
+            margin: 0 1.25rem 0 0;
             a {
               font-size: 0.9375rem;
             }
