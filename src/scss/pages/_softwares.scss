@@ -1,0 +1,69 @@
+.softwares-wrapper-section {
+    .software-search-form {
+        .form__field {
+            .form__input {
+                padding: 0.75rem 2.5rem 0.75rem 1rem;
+            }
+            .icon {
+                position: relative;
+                color: $dark;
+                position: absolute;
+                top: 12px;
+                right: 20px;
+                font-size: 1.25rem;
+            }
+        }
+        
+    }
+    .softwares-list-table {
+        thead {
+            tr {
+                th {
+                    font-size: 1.25rem;
+                    text-transform: uppercase;
+                    color: $dark;
+
+                    
+                        &:first-child,
+                        &:last-child {
+                            width: 30px;
+                        }
+                    
+                }
+            }
+        }
+        tbody {
+            tr {
+                th,
+                td {
+                    padding: 1rem;
+                    font-size: 1rem;
+
+                    .btn--soft-download {
+                        font-size: 0.875rem;
+                        padding: 0.625rem 1.375rem;
+                    }
+                }
+
+                &:hover {
+                    background-color: rgba($border-color, 0.75)!important;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1700px) {
+    .softwares-wrapper-section {
+        .softwares-list-table {
+            vertical-align: middle;
+            tbody {
+                tr {
+                    th,
+                    td {
+                        font-size: 1.15rem;
+                    }
+                }
+            }  
+        }
+    }
+}

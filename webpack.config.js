@@ -69,6 +69,24 @@ export default {
       {
         test: /\.(jpg|jpeg|png|git|svg)$/i,
         type: "asset/resource",
+      },
+      // // Bootstrap Icons
+      // {
+      //   test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   include: path.resolve(__dirname, './node_modules/bootstrap-icons/font/fonts'),
+      //   use: {
+      //       loader: 'file-loader',
+      //       options: {
+      //           name: '[name].[ext]',
+      //           outputPath: 'webfonts',
+      //           publicPath: '../webfonts',
+      //       },
+      //   }
+      // }
+
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ['file-loader']
       }
     ],
   },
@@ -111,6 +129,14 @@ export default {
       template: path.resolve(process.cwd(), "about.html"),
       filename: 'about.html'
      }), 
+    new HtmlWebpackPlugin({
+      template: path.resolve(process.cwd(), "softwares.html"),
+      filename: 'softwares.html'
+     }), 
+     new HtmlWebpackPlugin({
+      template: path.resolve(process.cwd(), "contact.html"),
+      filename: 'contact.html'
+     }), 
   ],
 
   // Configure the "webpack-dev-server" plugin
@@ -120,8 +146,8 @@ export default {
     },
     watchFiles: [
       path.resolve(process.cwd(), "index.html"),
-      path.resolve(process.cwd(), "about.html")
-
+      path.resolve(process.cwd(), "about.html"),
+      path.resolve(process.cwd(), "contact.html")
     ],
     compress: true,
     port: process.env.PORT || 9090,

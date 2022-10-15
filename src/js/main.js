@@ -17,6 +17,13 @@ import 'swiper/css/bundle';
 // Load Bootstrap init
 import {initBootstrap} from "./bootstrap.js";
 
+// require('bootstrap-icons/font/bootstrap-icons.css');
+import '../../node_modules/@fortawesome/fontawesome-free/css/brands.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/regular.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/solid.css';
+import '../../node_modules/@fortawesome/fontawesome-free/js/all.js';
+// import FastGlob from 'fast-glob';
+
 // Loading bootstrap with optional features
 initBootstrap({
   tooltip: true,
@@ -190,21 +197,28 @@ $(document).ready(function() {
     return false;
   }
 
-  var CurrentUrl= document.URL;
-            var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
-            console.log(CurrentUrlEnd);
-            $( ".site-header__nav ul li a" ).each(function() {
-                  var ThisUrl = $(this).attr('href');
-                  var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
+  let switchNavMenuItem = (menuItems) => {
 
-                  if(ThisUrlEnd == CurrentUrlEnd){
-                    $('.site-header__nav ul li').removeClass('active');
-                    $(this).closest('li').addClass('active')
-                  }
-                  else {
-                    $('.site-header__nav ul li:first-child').addClass('active');
-                  }
-            });
+    var current = location.pathname;
+    console.log(current);
+
+    $.each(menuItems, (index, item) => {
+
+        $(item).removeClass('active')
+
+        // if(current === '/') {
+        //   console.log('its home');
+        // }
+
+        if ((current.includes($(item).find('a').attr('href')) && $(item).find('a').attr('href') !== "/")){
+            $(item).addClass('active')
+            // || ($(item).find('a').attr('href') === "/" && current === "/"
+        }
+        
+    });
+}
+
+switchNavMenuItem($('#siteHeader li'));
 
             // $('#rqfSelectSubject').select2();
 
@@ -218,6 +232,25 @@ $(document).ready(function() {
       else {
         $('#rqfSelectService').closest('.form__field').slideUp(300);
       }
+  })
+
+  // Software search form
+  var searchInputField = $('.software-search-form .form__input');
+  var softwareTitles = $('.softwares-list-table tbody tr td:nth-child(2)');
+  searchInputField.on('keyup', function() {
+    // console.log($(this).val());
+    var inpVal = $(this).val().toUpperCase();
+
+    softwareTitles.each(function() {
+      var titleVal = $(this).html().toUpperCase();
+      // console.log(titleVal);
+      if(titleVal.indexOf(inpVal) <= -1) {
+        $(this).closest('tr').hide();
+      }
+      else {
+        $(this).closest('tr').show();
+      }
+    })
   })
 
 })

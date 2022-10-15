@@ -41,7 +41,7 @@
 @import "components/accordion";
 @import "components/form";
 @import "components/swiper";
-
+@import "components/pagetitle";
 
 // Layout
 @import "./layout/header";
@@ -51,5 +51,7 @@
 
 // Pages
 @import "./pages/home";
+@import "./pages/softwares";
+
 
 // @import "~nice-select2/src/scss/nice-select2.scss";

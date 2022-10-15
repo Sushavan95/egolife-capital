@@ -1,7 +1,36 @@
 .pagetitle-section {
-  padding: 4.5rem 1rem;
+  padding: 4rem 0;
   position: relative;
+  background-color: $dark;
 
+  .container {
+    position: relative;
+
+    .pagetitle {
+      color: #fff;
+      font-size: 1.875rem;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem 0;
+    }
+  
+    .breadcrumb {
+      li {
+        a {
+          color: #fff;
+        }
+  
+        &.active {
+          span {
+            color: #fff;
+            background-color: $primary;
+            padding: 0.25rem 0.5rem;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+  
   &:before {
     content: "";
     display: block;
@@ -10,65 +39,48 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-image: linear-gradient(rgba(252, 248, 243, 1), rgba(255, 255, 255, 0.8));
+    background-color: rgba($dark, 0.9);
   }
 }
 .site-content {
-  &.site-content--products {
+  &.site-content--softwares {
     .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
-    }
-  }
-
-  &.site-content--product-single {
-    .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
-    }
-  }
-
-  &.site-content--wishlist {
-    .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
-    }
-  }
-
-  &.site-content--cart {
-    .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
-    }
-  }
-
-  &.site-content--checkout {
-    .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
-    }
-  }
-
-  &.site-content--login {
-    .pagetitle-section {
-      background-image: url(../images/products-pagetitle-bg.webp);
-      @include backgroundImgSetting(center center, cover, no-repeat);
+      background-image: url(../images/softwares-pagetitle-bg.webp);
+      @include backgroundImageSetting(center center, cover, no-repeat);
     }
   }
 }
 
 @include media-breakpoint-up(md) {
   .pagetitle-section {
-    padding: 6.25rem 1rem;
+    padding: 4rem 0;
   }
 }
 @include media-breakpoint-up(lg) {
   .pagetitle-section {
-    padding: 10rem 1rem;
+    padding: 4.5rem 0;
+
+    .container {
+      .pagetitle {
+        font-size: 2.25rem;
+        margin: 0;
+      }
+    }
   }
 }
 @include media-breakpoint-up(xl) {
   .pagetitle-section {
-    padding: 8.25rem 1rem;
+    padding: 5rem 0;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .pagetitle-section {
+    padding: 6.25rem 0;
+
+    .container {
+      .pagetitle {
+        font-size: 2.5rem;
+      }
+    }
   }
 }
