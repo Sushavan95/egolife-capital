@@ -1,0 +1,17 @@
+.soft-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem 0.75rem;
+}
+@include media-breakpoint-up(md) {
+    .soft-items-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem 1rem;  
+    }
+}
+@include media-breakpoint-up(lg) {
+    .soft-items-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.875rem 1.5rem;  
+    }
+}

@@ -52,11 +52,11 @@
                   <!-- Main Navigation Menu -->
                   <nav class="site-header__nav w-auto d-none d-lg-inline-flex align-items-center">
                      <ul class="d-flex justify-content-between align-items-center">
-                        <li>
+                        <li class="active">
                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                           <a href="#">About</a>
+                           <a href="about.html">About</a>
                         </li>
                         <li>
                            <a href="#">Services<span class="dropdown-icon ms-2"><i class="fa-solid fa-chevron-down"></i></span></a>
@@ -82,7 +82,7 @@
                            <a href="softwares.html">Softwares</a>
                         </li>
                         <li>
-                           <a href="#">Contact Us</a>
+                           <a href="contact.html">Contact</a>
                         </li>
                      </ul>
                      <div class="d-inline-block">
@@ -99,18 +99,18 @@
          <!-- Mobile Nav -->
          <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="offcanvasMobileNav" aria-labelledby="offcanvasMobileNav">
             <div class="offcanvas-header align-items-center">
-               <div><a href="#" class="offcanvas__logo"><img src="images/logo.png" alt="logo" width="90"></a></div>
+               <div><a href="#" class="offcanvas__logo"><img src="images/logo.png" alt="logo" width="90" height="35"></a></div>
                <button type="button" class="btn-close text-reset bg-transparent border-0 p-2 text-white h5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                <div class="dropdown mt-3">
                   <nav class="site-header__mobile-nav">
                      <ul class="mobile-nav">
-                        <li>
+                        <li class="active">
                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                           <a href="#">About</a>
+                           <a href="about.html">About</a>
                         </li>
                         <li>
                            <a href="#" class="has-dropdown">Services<span><i class="fa-solid fa-plus"></i></span></a>
@@ -136,7 +136,7 @@
                            <a href="softwares.html">Softwares</a>
                         </li>
                         <li>
-                           <a href="#">Contact Us</a>
+                           <a href="contact.html">Contact</a>
                         </li>
                      </ul>
                   </nav>
@@ -165,214 +165,283 @@
             </div>
         </section> 
         
-        
-    </main>
+        <section class="section--pb contact-section position-relative">
+         <div class="container position-relative">
+            <div class="row">
+               <div class="col-12 col-lg-6 mb-4">
+                  <div class="section__header pt-5">
+                     <h2 class="text-dark fw-bold text-uppercase">Get In Touch</h2>
+                     <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, odio.</p>
+                  </div>
+                  <div class="row">
+                     <div class="col-12 col-md-8 col-xl-7">
+                        <div class="contact-block">
+                           <p class="text-dark fw-semibold mb-2">Email</p>
+                           <h6 class="contact--link"><a href="mailto:info@egolifecapital.in">info@egolifecapital.in</a></h6>
+                        </div>
+      
+                        <div class="contact-block">
+                           <p class="text-dark fw-semibold mb-2">Phone</p>
+                           <h6 class="contact--link"><a href="tel:+ 91 90989 09897">+ 91 90989 09897</a></h6>
+                        </div>
+      
+                        <div class="contact-block">
+                           <p class="text-dark fw-semibold mb-2">Address</p>
+                           <h6 class="contact--link"><a href="javascipt:void(0)">1/22 Lorem Ipsum Street, Dummy State 700700</a></h6>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="col-12 col-lg-6 pt-3">
+                  <form action="#" class="form contact-form">
+                     <div class="row">
+                        <div class="form__field">
+                           <input type="text" name="cf_name" class="form__input" placeholder="Full Name*" required>
+                        </div>
+                        <div class="form__field">
+                           <input type="email" name="cf_email" class="form__input" placeholder="Email*" required>
+                        </div>
+                        <div class="form__field">
+                           <input type="text" name="cf_phone" class="form__input" placeholder="Phone*" required>
+                        </div>
+                        <div class="form__field">
+                           <select name="cf_select_subject" class="form__input" id="cfSelectSubject" required>
+                              <option value="" disabled selected>Select Subject</option>
+                              <option value="service">Service Related</option>
+                              <option value="product">Product Related</option>
+                              <option value="others">Others</option>
+                           </select>
+                        </div>
+                        <div class="form__field" style="display: none;">
+                           <select name="cf_select_service" class="form__input" id="cfSelectService" required>
+                              <option value="" disabled selected>Select Service</option>
+                              <option value="Business Consulting">Business Consulting</option>
+                              <option value="Investment Advisor">Investment Advisor</option>
+                              <option value="Tax Consultant">Tax Consultant</option>
+                              <option value="Finance Consulting">Finance Consulting</option>
+                              <option value="Insurance Adjuster">Insurance Adjuster</option>
+                           </select>
+                        </div>
+                        <div class="form__field">
+                           <textarea name="cf_message" class="form__input" placeholder="Message(optional)"></textarea>
+                        </div>
+                        <div class="text-center">
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+        </section>
+      </main>
 
       <!-- SITE FOOTER -->
       <footer class="site-footer bg-dark">
-        <div class="site-footer__top">
-           <div class="container">
-              <div class="menus-wrapper">
-                 <div class="menu-block menu-block--about pe-xl-4">
-                    <div class="row">
-                       <div class="col-12 col-sm-10 col-md-8 col-xl-12">
-                           <h6 class="fw-semibold text-white text-uppercase mb-4">About</h6>
-                           <p class="text-lightText mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eaque quidem enim natus commodi minima velit suscipit laborum quis.</p>
-                           <form action="#" class="newsletter-form form pt-1">
-                               <div class="form__field d-flex justify-content-between bg-white p-1">
-                                  <input type="email" name="n_email" class="form__input border-0 form__input--no-focus" placeholder="Your Email*" required>
-                                  <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
-                               </div>
-                            </form>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="menu-block menu-block--services">
-                    <h6 class="fw-semibold text-white text-uppercase mb-4">Services</h6>
-                    <nav class="footer-menu">
-                       <ul class="menu">
-                          <li>
-                             <a href="#">Business Consulting</a>
-                          </li>
-                          <li>
-                             <a href="#">Investment Advisor</a>
-                          </li>
-                          <li>
-                             <a href="#">Tax Consultant</a>
-                          </li>
-                          <li>
-                             <a href="#">Finance Consulting</a>
-                          </li>
-                          <li>
-                             <a href="#">Insurance Ajuster</a>
-                          </li>
-                       </ul>
-                    </nav>
-                 </div>
-                 <div class="menu-block menu-block--quick-links">
-                    <h6 class="fw-semibold text-white text-uppercase mb-4">Quick Links</h6>
-                    <nav class="footer-menu">
-                       <ul class="menu">
-                          <li>
-                             <a href="#">Home</a>
-                          </li>
-                          <li>
-                             <a href="#">About</a>
-                          </li>
-                          <li>
-                             <a href="#">Download</a>
-                          </li>
-                          <li>
-                             <a href="#">Products</a>
-                          </li>
-                          <li>
-                             <a href="#">Become a Partner</a>
-                          </li>
-                       </ul>
-                    </nav>
-                 </div>
-                 <div class="menu-block menu-block--need-help">
-                    <h6 class="fw-semibold text-white text-uppercase mb-4">Need Help?</h6>
-                    <nav class="footer-menu">
-                       <ul class="menu">
-                          <li>
-                             <a href="#">FAQs</a>
-                          </li>
-                          <li>
-                             <a href="#">Contact Us</a>
-                          </li>
-                          <li>
-                             <a href="#">Help Center</a>
-                          </li>
-                          <li>
-                             <a href="#">Privacy Policy</a>
-                          </li>
-                          <li>
-                             <a href="#">Return Policy</a>
-                          </li>
-                       </ul>
-                    </nav>
-                 </div>
-                 <div class="menu-block menu-block--contact">
-                    <h6 class="fw-semibold text-white text-uppercase mb-4">Contact Information</h6>
-                    <div class="contact-block d-flex align-items-center mb-3">
-                       <div class="contact-block__icon d-flex d-sm-none d-md-flex d-xl-none d-xxl-flex rounded-circle border">
-                          <i class="fa-solid fa-phone"></i>
-                       </div>
-                       <div class="contact-block__text ps-3 ps-sm-0 ps-md-3 ps-xl-0 px-xxl-3">
-                          <a href="tel:+ 91 90989 09897" class="d-inline-block fw-semibold">+ 91 90989 09897</a>
-                          <p class="text-sm mb-0 mt-1">Working 10:00am - 6:00pm</p>
-                       </div>
-                    </div>
-                    <div class="contact-block d-flex align-items-center mb-3 pt-1">
-                       <div class="contact-block__icon d-flex d-sm-none d-md-flex d-xl-none d-xxl-flex rounded-circle border">
-                          <i class="fa-solid fa-envelope"></i>
-                       </div>
-                       <div class="contact-block__text ps-3 ps-sm-0 ps-md-3 ps-xl-0 px-xxl-3">
-                          <a href="mailto:info@egolifecapital.in" class="d-inline-block fw-semibold">info@egolifecapital.in</a>
-                          <p class="text-sm mb-0 mt-1">Feel free to send us a query</p>
-                       </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                       <span class="text-sm me-3 text-muted">Follow Us</span>
-                       <ul class="social-icons d-flex pt-1">
-                          <li>
-                             <a href="#" target="_blank">
-                             <i class="fa-brands fa-facebook-f"></i>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" target="_blank">
-                             <i class="fa-brands fa-twitter"></i>
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#" target="_blank">
-                             <i class="fa-brands fa-instagram"></i>
-                             </a>
-                          </li>
-                       </ul>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="site-footer__bottom">
-           <div class="container py-4">
-              <div class="row align-items-center py-3 flex-column-reverse flex-lg-row">
-                 <div class="col-12 col-lg-6 text-center text-lg-start mb-2 mb-lg-0">
-                    <p class="text-muted pt-1 pt-lg-0 d-inline-block w-auto mb-0 copyright-text">EgolifeCapital©Copyright.All rights reserved.</p>
-                 </div>
-                 <div class="col-12 col-lg-6 ps-lg-5 text-center text-lg-start d-flex justify-content-center justify-content-lg-end">
-                    <div class="d-lg-flex align-items-center">
-                       <ul class="bottom-menu d-flex pe-3 justify-content-center justify-content-lg-start mb-2 mb-lg-0">
-                          <li>
-                             <a href="#">
-                             Terms Condition
-                             </a>
-                          </li>
-                          <li>
-                             <a href="#">
-                             Cookies
-                             </a>
-                          </li>
-                       </ul>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <!-- Request A Quote Modal -->
-        <div class="modal fade" id="reqAQuoteModal" aria-hidden="true" aria-labelledby="reqAQuoteModalLabel" tabindex="-1">
-           <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content border-0 p-2 p-xl-3">
-                 <div class="modal-header border-0">
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">&nbsp;</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body border-0">
-                    <form action="" class="form request-quote-form">
-                       <div class="row">
-                          <div class="form__field col-12 col-lg-6">
-                             <input type="text" name="rqf_name" class="form__input" placeholder="Full Name*" required>
-                          </div>
-                          <div class="form__field col-12 col-lg-6">
-                             <input type="email" name="rqf_email" class="form__input" placeholder="Email*" required>
-                          </div>
-                          <div class="form__field col-12 col-lg-6">
-                             <input type="text" name="rqf_phone" class="form__input" placeholder="Phone*" required>
-                          </div>
-                          <div class="form__field col-12 col-lg-6">
-                             <select name="rqf_select_subject" class="form__input" id="rqfSelectSubject" required>
-                                <option value="" disabled selected>Select Subject</option>
-                                <option value="service">Service Related</option>
-                                <option value="product">Product Related</option>
-                                <option value="others">Others</option>
-                             </select>
-                          </div>
-                          <div class="form__field col-12" style="display: none;">
-                             <select name="rqf_select_service" class="form__input" id="rqfSelectService" required>
-                                <option value="" disabled selected>Select Service</option>
-                                <option value="Business Consulting">Business Consulting</option>
-                                <option value="Investment Advisor">Investment Advisor</option>
-                                <option value="Tax Consultant">Tax Consultant</option>
-                                <option value="Finance Consulting">Finance Consulting</option>
-                                <option value="Insurance Adjuster">Insurance Adjuster</option>
-                             </select>
-                          </div>
-                          <div class="form__field col-12">
-                             <textarea name="rqf_message" class="form__input" placeholder="Message(optional)"></textarea>
-                          </div>
-                          <div class="text-center">
-                             <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                       </div>
-                    </form>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <a href="javascript:void(0)" class="scroll-to-top-button rounded-circle"><i class="fa-solid fa-chevron-up"></i></a>
-     </footer>
+         <div class="site-footer__top">
+            <div class="container">
+               <div class="menus-wrapper">
+                  <div class="menu-block menu-block--about pe-xl-4">
+                     <div class="row">
+                        <div class="col-12 col-sm-10 col-md-8 col-xl-12">
+                            <h6 class="fw-semibold text-white text-uppercase mb-4">About</h6>
+                            <p class="text-lightText mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto eaque quidem enim natus commodi minima velit suscipit laborum quis.</p>
+                            <form action="#" class="newsletter-form form pt-1">
+                                <div class="form__field d-flex justify-content-between bg-white p-1">
+                                   <input type="email" name="n_email" class="form__input border-0 form__input--no-focus" placeholder="Your Email*" required>
+                                   <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                                </div>
+                             </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="menu-block menu-block--services">
+                     <h6 class="fw-semibold text-white text-uppercase mb-4">Services</h6>
+                     <nav class="footer-menu">
+                        <ul class="menu">
+                           <li>
+                              <a href="#">Business Consulting</a>
+                           </li>
+                           <li>
+                              <a href="#">Investment Advisor</a>
+                           </li>
+                           <li>
+                              <a href="#">Tax Consultant</a>
+                           </li>
+                           <li>
+                              <a href="#">Finance Consulting</a>
+                           </li>
+                           <li>
+                              <a href="#">Insurance Ajuster</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="menu-block menu-block--quick-links">
+                     <h6 class="fw-semibold text-white text-uppercase mb-4">Quick Links</h6>
+                     <nav class="footer-menu">
+                        <ul class="menu">
+                           <li>
+                              <a href="index.html">Home</a>
+                           </li>
+                           <li>
+                              <a href="about.html">About</a>
+                           </li>
+                           <li>
+                              <a href="services.html">Services</a>
+                           </li>
+                           <li>
+                              <a href="softwares.html">Softwares</a>
+                           </li>
+                           <li>
+                              <a href="#">Become a Partner</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="menu-block menu-block--need-help">
+                     <h6 class="fw-semibold text-white text-uppercase mb-4">Need Help?</h6>
+                     <nav class="footer-menu">
+                        <ul class="menu">
+                           <li>
+                              <a href="#">FAQs</a>
+                           </li>
+                           <li>
+                              <a href="contact.html">Contact</a>
+                           </li>
+                           <li>
+                              <a href="#">Help Center</a>
+                           </li>
+                           <li>
+                              <a href="#">Privacy Policy</a>
+                           </li>
+                           <li>
+                              <a href="#">Return Policy</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="menu-block menu-block--contact">
+                     <h6 class="fw-semibold text-white text-uppercase mb-4">Contact Information</h6>
+                     <div class="contact-block d-flex align-items-center mb-3">
+                        <div class="contact-block__icon d-flex d-sm-none d-md-flex d-xl-none d-xxl-flex rounded-circle border">
+                           <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-block__text ps-3 ps-sm-0 ps-md-3 ps-xl-0 px-xxl-3">
+                           <a href="tel:+ 91 90989 09897" class="d-inline-block fw-semibold">+ 91 90989 09897</a>
+                           <p class="text-sm mb-0 mt-1">Working 10:00am - 6:00pm</p>
+                        </div>
+                     </div>
+                     <div class="contact-block d-flex align-items-center mb-3 pt-1">
+                        <div class="contact-block__icon d-flex d-sm-none d-md-flex d-xl-none d-xxl-flex rounded-circle border">
+                           <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-block__text ps-3 ps-sm-0 ps-md-3 ps-xl-0 px-xxl-3">
+                           <a href="mailto:info@egolifecapital.in" class="d-inline-block fw-semibold">info@egolifecapital.in</a>
+                           <p class="text-sm mb-0 mt-1">Feel free to send us a query</p>
+                        </div>
+                     </div>
+                     <div class="d-flex align-items-center">
+                        <span class="text-sm me-3 text-muted">Follow Us</span>
+                        <ul class="social-icons d-flex pt-1">
+                           <li>
+                              <a href="#" target="_blank">
+                              <i class="fa-brands fa-facebook-f"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" target="_blank">
+                              <i class="fa-brands fa-twitter"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" target="_blank">
+                              <i class="fa-brands fa-instagram"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="site-footer__bottom">
+            <div class="container py-4">
+               <div class="row align-items-center py-3 flex-column-reverse flex-lg-row">
+                  <div class="col-12 col-lg-6 text-center text-lg-start mb-2 mb-lg-0">
+                     <p class="text-muted pt-1 pt-lg-0 d-inline-block w-auto mb-0 copyright-text">EgolifeCapital©Copyright.All rights reserved.</p>
+                  </div>
+                  <div class="col-12 col-lg-6 ps-lg-5 text-center text-lg-start d-flex justify-content-center justify-content-lg-end">
+                     <div class="d-lg-flex align-items-center">
+                        <ul class="bottom-menu d-flex pe-3 justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+                           <li>
+                              <a href="#">
+                              Terms Condition
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              Cookies
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Request A Quote Modal -->
+         <div class="modal fade" id="reqAQuoteModal" aria-hidden="true" aria-labelledby="reqAQuoteModalLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content border-0 p-2 p-xl-3">
+                  <div class="modal-header border-0">
+                     <h1 class="modal-title fs-5" id="exampleModalToggleLabel">&nbsp;</h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body border-0">
+                     <form action="" class="form request-quote-form">
+                        <div class="row">
+                           <div class="form__field col-12 col-lg-6">
+                              <input type="text" name="rqf_name" class="form__input" placeholder="Full Name*" required>
+                           </div>
+                           <div class="form__field col-12 col-lg-6">
+                              <input type="email" name="rqf_email" class="form__input" placeholder="Email*" required>
+                           </div>
+                           <div class="form__field col-12 col-lg-6">
+                              <input type="text" name="rqf_phone" class="form__input" placeholder="Phone*" required>
+                           </div>
+                           <div class="form__field col-12 col-lg-6">
+                              <select name="rqf_select_subject" class="form__input" id="rqfSelectSubject" required>
+                                 <option value="" disabled selected>Select Subject</option>
+                                 <option value="service">Service Related</option>
+                                 <option value="product">Product Related</option>
+                                 <option value="others">Others</option>
+                              </select>
+                           </div>
+                           <div class="form__field col-12" style="display: none;">
+                              <select name="rqf_select_service" class="form__input" id="rqfSelectService" required>
+                                 <option value="" disabled selected>Select Service</option>
+                                 <option value="Business Consulting">Business Consulting</option>
+                                 <option value="Investment Advisor">Investment Advisor</option>
+                                 <option value="Tax Consultant">Tax Consultant</option>
+                                 <option value="Finance Consulting">Finance Consulting</option>
+                                 <option value="Insurance Adjuster">Insurance Adjuster</option>
+                              </select>
+                           </div>
+                           <div class="form__field col-12">
+                              <textarea name="rqf_message" class="form__input" placeholder="Message(optional)"></textarea>
+                           </div>
+                           <div class="text-center">
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a href="javascript:void(0)" class="scroll-to-top-button rounded-circle"><i class="fa-solid fa-chevron-up"></i></a>
+      </footer>
   </body>
 </html>

@@ -2,6 +2,7 @@
   padding: 4rem 0;
   position: relative;
   background-color: $dark;
+  @include backgroundImageSetting(center center, cover, no-repeat);
 
   .container {
     position: relative;
@@ -46,7 +47,18 @@
   &.site-content--softwares {
     .pagetitle-section {
       background-image: url(../images/softwares-pagetitle-bg.webp);
-      @include backgroundImageSetting(center center, cover, no-repeat);
+    }
+  }
+
+  &.site-content--contact {
+    .pagetitle-section {
+      background-image: url(../images/contact-pagetitle-bg.webp);
+    }
+  }
+
+  &.site-content--about {
+    .pagetitle-section {
+      background-image: url(../images/about-pagetitle-bg.webp);
     }
   }
 }

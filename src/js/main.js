@@ -197,35 +197,27 @@ $(document).ready(function() {
     return false;
   }
 
-  let switchNavMenuItem = (menuItems) => {
+  var current = location.pathname;
+  current = current.replace('/', '');
 
-    var current = location.pathname;
-    console.log(current);
-
-    $.each(menuItems, (index, item) => {
-
-        $(item).removeClass('active')
-
-        // if(current === '/') {
-        //   console.log('its home');
-        // }
-
-        if ((current.includes($(item).find('a').attr('href')) && $(item).find('a').attr('href') !== "/")){
-            $(item).addClass('active')
-            // || ($(item).find('a').attr('href') === "/" && current === "/"
-        }
-        
-    });
-}
-
-switchNavMenuItem($('#siteHeader li'));
+  if(current !== '') {
+    $('.site-header .site-header__nav li a').each(function(){
+      var $this = $(this);  
+      // if the current path is like this link, make it active
+      if($this.attr('href').indexOf(current) !== -1){
+        $('.site-header .site-header__nav li').removeClass('active');
+          $this.parent().addClass('active');
+      }
+  })
+  }
+    
 
             // $('#rqfSelectSubject').select2();
 
   // Request a quote form - dependency on select subject
   var selectSubjectOption = $('#rqfSelectSubject');
   selectSubjectOption.on('change', function() {
-      console.log($(this).val());
+      // console.log($(this).val());
       if($(this).val() === 'service'){
         $('#rqfSelectService').closest('.form__field').slideDown(300);
       }
@@ -234,9 +226,22 @@ switchNavMenuItem($('#siteHeader li'));
       }
   })
 
+  // contact form - dependency on select subject
+  var selectSubjectOption2 = $('#cfSelectSubject');
+  selectSubjectOption2.on('change', function() {
+      // console.log($(this).val());
+      if($(this).val() === 'service'){
+        $('#cfSelectService').closest('.form__field').slideDown(300);
+      }
+      else {
+        $('#cfSelectService').closest('.form__field').slideUp(300);
+      }
+  })
+
   // Software search form
   var searchInputField = $('.software-search-form .form__input');
-  var softwareTitles = $('.softwares-list-table tbody tr td:nth-child(2)');
+  //var softwareTitles = $('.softwares-list-table tbody tr td:nth-child(2)');
+  var softwareTitles = $('.soft-item .soft-item__title a');
   searchInputField.on('keyup', function() {
     // console.log($(this).val());
     var inpVal = $(this).val().toUpperCase();
@@ -245,13 +250,26 @@ switchNavMenuItem($('#siteHeader li'));
       var titleVal = $(this).html().toUpperCase();
       // console.log(titleVal);
       if(titleVal.indexOf(inpVal) <= -1) {
-        $(this).closest('tr').hide();
+        $(this).closest('.soft-item').hide();
+        checkEmptyItems();
       }
       else {
-        $(this).closest('tr').show();
+        $(this).closest('.soft-item').show();
+        checkEmptyItems();
       }
     })
   })
+  function checkEmptyItems() {
+    console.log($('.soft-item').length);
+    if($('.soft-item').length <= 0) {
+      $('soft-count--empty').removeClass('d-none');
+      console.log('empty');
+    }
+    else {
+      $('soft-count--empty').addClass('d-none');
+      console.log('not empty');
+    }
+  }
 
 })
 

@@ -42,16 +42,20 @@
 @import "components/form";
 @import "components/swiper";
 @import "components/pagetitle";
+@import "components/software-item";
+
 
 // Layout
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/services-grid";
+@import "./layout/softwares-grid";
 
 
 // Pages
 @import "./pages/home";
 @import "./pages/softwares";
+@import "./pages/contact";
 
 
 // @import "~nice-select2/src/scss/nice-select2.scss";
